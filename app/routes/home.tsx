@@ -1,13 +1,27 @@
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import Navbar from "~/Components/Navbar";
+
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Resumind" },
+    { name: "description", content: "CAREER LIFT FEEDBACK FOR YOUR DREAM JOB!" },
   ];
 }
 
 export default function Home() {
-  return <Welcome />;
+  return<main className="min-h-screen bg-[url('/images/bg-main.svg')] bg-cover bg-center">
+    <Navbar />
+    <section className="main-section">
+          <div className="page-heading">
+                <h1>Track your applications & ratings</h1>
+            <h2>
+              Review your submissions and check AI-powered feedback.
+            </h2>
+          </div>
+        </section>
+
+
+      </main>
 }
+
